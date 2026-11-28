@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>프로 모드 미리보기</title>
+<style>
+:root {
+  --bg: #f4f5f8; --panel: #fff; --ink: #1b1d2a; --muted: #5d6275; --line: #d9dce6;
+  --gold: #9a6f00; --gold-soft: #fff3c8; --ok: #1f7a4d; --ok-soft: #e1f3e9; --warn: #b4441c; --warn-soft: #fbe6dc;
+  --chip: #eef0f6;
+  --sans: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12141d; --panel: #1b1e2a; --ink: #eceef5; --muted: #9aa0b5; --line: #2e3244;
+  --gold: #f0c64a; --gold-soft: #3a3214; --ok: #6fd3a0; --ok-soft: #173326; --warn: #ff9a72; --warn-soft: #3b2219;
+  --chip: #262a3a; color-scheme: dark } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.65 var(--sans); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 28px 16px 64px; display: grid; gap: 36px; }
+h1 { font-size: 28px; line-height: 1.25; margin: 0; }
+h2 { font-size: 20px; margin: 0 0 6px; }
+h3 { font-size: 16px; margin: 0; }
+p { margin: 0; }
+.sub { color: var(--muted); }
+header { display: grid; gap: 12px; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-block; padding: 10px 16px; border-radius: 10px; background: var(--gold-soft); color: var(--ink); text-decoration: none; outline: 1px solid var(--gold); font-weight: 600; }
+.facts { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.fact { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 4px; }
+.fact b { font-size: 13px; color: var(--muted); font-weight: 500; }
+.fact.on { border-color: var(--ok); }
+.fact.later { border-style: dashed; }
+section { display: grid; gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 10px; }
+.flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.box { background: var(--chip); border-radius: 8px; padding: 8px 12px; font-size: 14px; }
+.box.ok { background: var(--ok-soft); outline: 1px solid var(--ok); }
+.box.warn { background: var(--warn-soft); outline: 1px solid var(--warn); }
+.box.gold { background: var(--gold-soft); outline: 1px solid var(--gold); }
+.arrow { color: var(--muted); }
+.shots { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+figure img { display: block; width: 100%; height: 320px; object-fit: cover; object-position: top; background: #0b0d14; }
+figure img.mid { object-position: 50% 62%; }
+figure img.ctr { object-position: 50% 55%; }
+figcaption { padding: 10px 12px 12px; font-size: 13.5px; }
+figcaption b { display: block; font: 600 12px var(--mono); color: var(--muted); margin-bottom: 2px; }
+ol, ul { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
+.tbl { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
+th, td { padding: 9px 12px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-size: 12.5px; color: var(--muted); font-weight: 500; }
+td { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+tr:last-child td { border-bottom: 0; }
+td.tight { color: var(--warn); font-weight: 600; }
+code { font-family: var(--mono); background: var(--chip); padding: 1px 6px; border-radius: 6px; }
+footer { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>프로 모드 미리보기</h1>
+  <p class="sub">총자산 5,000 USDT 이상 회원이 켜는 오토 모드의 상위 단계입니다. 아직 회원 앱에 게시하지 않은 검토용 자료입니다. 보시고 의견 주세요.</p>
+  <div class="cta">
+    <a class="btn" href="../">검토판 직접 눌러 보기 →</a>
+  </div>
+</header>
+
+<section>
+  <h2>한눈에</h2>
+  <div class="facts">
+    <div class="fact on"><b>이번에 켜지는 것</b>날씨가 '폭풍'이면 프로 회원의 1차 비중을 13%에서 9.1%로 자동으로 줄입니다</div>
+    <div class="fact later"><b>다음 단계 (아직 꺼 둠)</b>변동성에 맞춰 배율 50~80× 자동. 켜기 전까지는 모두 50×</div>
+    <div class="fact"><b>그대로인 것</b>1차 13% · 익절 +10% · 2·3·4차 추가 진입 표 · 자동 손절 · 동업자 컨트롤러 명령</div>
+  </div>
+</section>
+
+<section>
+  <h2>누가 쓸 수 있나</h2>
+  <div class="card">
+    <div class="flow"><span class="box">총자산 5,000 USDT 이상</span><span class="arrow">→</span><span class="box ok">프로 자격</span><span class="arrow">→</span><span class="box gold">회원이 스위치로 켬</span></div>
+    <div class="flow"><span class="box">4,500 USDT 아래로 24시간 이어짐</span><span class="arrow">→</span><span class="box warn">자격 해제</span></div>
+    <p class="sub">잔고는 서버가 그 회원 거래소에서 직접 읽어 판정합니다. 오렌지엑스·투빗 회원 모두 같은 기준입니다. 자격이 있어도 회원이 켜야 적용됩니다.</p>
+  </div>
+</section>
+
+<section>
+  <h2>시장 날씨</h2>
+  <div class="card">
+    <ul>
+      <li><b>맑음</b> · 최근 출렁임이 평소(지난 7일)보다 작음</li>
+      <li><b>흐림</b> · 평소보다 큼</li>
+      <li><b>폭풍</b> · 아주 큼(상위 20%) → 프로 회원 1차 비중 30% 줄임</li>
+    </ul>
+    <p class="sub">날씨는 비중을 줄이는 데만 씁니다. 배율을 올리는 데는 쓰지 않아서, 날씨 값이 잘못 와도 위험이 커지지 않습니다.</p>
+  </div>
+</section>
+
+<section>
+  <h2>회원 화면</h2>
+  <p class="sub">오토 모드 창의 '프로 모드 ›' 줄을 누르면 프로 모드 화면이 열립니다. 오토 모드가 도는 중에도 켜고 끌 수 있습니다.</p>
+  <div class="shots">
+    <figure><img src="img/01-entry-setup.png" alt="오토 모드 창의 프로 모드 줄" loading="lazy"><figcaption><b>오토 모드 창</b>'프로 모드 · 800 USDT 남음 ›'</figcaption></figure>
+    <figure><img src="img/03-page-4200.png" alt="총자산 4200" loading="lazy"><figcaption><b>5,000 미만</b>남은 금액과 막대</figcaption></figure>
+    <figure><img src="img/05-page-judging-6000.png" alt="판정 전" loading="lazy"><figcaption><b>5,000 넘음 · 판정 전</b>잠시 뒤 자동으로 열림</figcaption></figure>
+    <figure><img src="img/06-page-off.png" alt="자격 있음 꺼짐" loading="lazy"><figcaption><b>자격 있음</b>켬·끔 스위치</figcaption></figure>
+    <figure><img src="img/07-page-confirm.png" alt="켤 때 확인" loading="lazy"><figcaption><b>켤 때 확인</b>무엇이 바뀌는지 한 번 더 보여 줌</figcaption></figure>
+    <figure><img src="img/08-page-on.png" alt="켜짐" loading="lazy"><figcaption><b>켜짐</b>폭풍일 때 1차 비중 줄임</figcaption></figure>
+    <figure><img src="img/12-page-weather-storm.png" alt="날씨 폭풍" loading="lazy"><figcaption><b>날씨 폭풍</b>오른쪽 위 날씨 칩</figcaption></figure>
+    <figure><img src="img/09-page-on-levon.png" alt="배율 켠 뒤" loading="lazy"><figcaption><b>다음 단계 (배율 켠 뒤)</b>'배율 50~80× 자동' 줄이 더해짐</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>거미줄 차트 (프로 회원만)</h2>
+  <p class="sub">프로 모드를 켠 회원의 트레이딩 차트에 진입 계획이 거미줄처럼 그어집니다. 1차 점이 찍히고 선이 뻗어 나가고, 2차가 체결되면 그 줄이 굵어지며 3·4차 자리가 새 평단 기준으로 다시 그어집니다. 매매가 끝나면 걷힙니다. 손절가·청산가는 그리지 않습니다.</p>
+  <div class="shots">
+    <figure><img src="img/27-spider.gif" alt="거미줄 움직임" class="mid" loading="lazy"><figcaption><b>움직임</b>줄이 차르르 그어지는 모습</figcaption></figure>
+    <figure><img src="img/24-spider-1-4.png" alt="1차 뒤" class="mid" loading="lazy"><figcaption><b>1차 진입 뒤</b>익절·2·3·4차 자리</figcaption></figure>
+    <figure><img src="img/25-spider-2-fill-4.png" alt="2차 체결" class="mid" loading="lazy"><figcaption><b>2차 체결</b>줄이 굵어지고 나머지 다시 그음</figcaption></figure>
+    <figure><img src="img/26-spider-3-done.png" alt="매매 끝" class="mid" loading="lazy"><figcaption><b>매매 끝</b>거미줄 걷힘</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>'프로 모드란?' 25초 설명</h2>
+  <p class="sub">프로 화면 게이지 아래 '프로 모드란?'을 누르면 장면 다섯 개가 5초씩 지나갑니다. 건너뛰기·다시 보기·닫기가 있습니다.</p>
+  <div class="shots">
+    <figure><img src="img/23-explain-1.png" alt="장면 1" class="ctr" loading="lazy"><figcaption><b>1</b>총자산 5,000 USDT부터</figcaption></figure>
+    <figure><img src="img/23-explain-2.png" alt="장면 2" class="ctr" loading="lazy"><figcaption><b>2</b>시장 날씨를 봅니다</figcaption></figure>
+    <figure><img src="img/23-explain-3.png" alt="장면 3" class="ctr" loading="lazy"><figcaption><b>3</b>폭풍이면 1차 비중 13% → 9.1%</figcaption></figure>
+    <figure><img src="img/23-explain-4.png" alt="장면 4" class="ctr" loading="lazy"><figcaption><b>4</b>차트에 진입 계획이 거미줄처럼</figcaption></figure>
+    <figure><img src="img/23-explain-5.png" alt="장면 5" class="ctr" loading="lazy"><figcaption><b>5</b>스위치 하나로 켜고 끕니다</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>다음 단계: 배율 50~80× 자동</h2>
+  <div class="card">
+    <ul>
+      <li>매매마다 1차 진입 때 최근 변동성을 보고 배율을 정해 그 매매가 끝날 때까지 고정합니다. 변동성이 크면 낮게, 작으면 높게.</li>
+      <li>BTC·ETH만 80×까지, 그 밖 종목은 60×까지.</li>
+      <li>배율이 높아지면 2·3·4차 자리를 청산 거리 비율로 같이 좁힙니다(아래 표).</li>
+      <li>투빗 회원은 투빗 쪽 높은 배율 실측 전까지 50× 그대로입니다.</li>
+      <li>켜는 순서: 동업자 표 확인 → 규칙 켜기 → 앱 게시 → 실행기 배포 → 회원이 프로를 다시 켬.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>동업자 확인표</h2>
+  <p class="sub">가격이 반대로 몇 % 움직이면 그 선에 닿는지. 배율이 높을수록 4차 강제 선과 추정 청산 사이가 좁아집니다. 이 표를 보고 의견 주세요.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>배율</th><th>2차 진입</th><th>3차 진입</th><th>4차 진입</th><th>4차 강제</th><th>추정 청산</th><th>4차 뒤 손절 감시</th></tr></thead>
+    <tbody>
+      <tr><td>50×</td><td>0.500%</td><td>0.800%</td><td>1.200%</td><td>1.600%</td><td>1.620%</td><td>1.296%</td></tr>
+      <tr><td>60×</td><td>0.397%</td><td>0.635%</td><td>0.953%</td><td>1.237%</td><td>1.287%</td><td>1.029%</td></tr>
+      <tr><td>70×</td><td>0.324%</td><td>0.518%</td><td>0.777%</td><td>1.006%</td><td>1.049%</td><td>0.839%</td></tr>
+      <tr><td>80×</td><td>0.269%</td><td>0.430%</td><td>0.644%</td><td class="tight">0.832%</td><td class="tight">0.870%</td><td>0.696%</td></tr>
+    </tbody>
+  </table></div>
+  <p class="sub">각 차수 선은 그때의 평균 진입가 기준, 손절 감시는 4차까지 체결한 뒤의 평균가 기준입니다.</p>
+</section>
+
+<section>
+  <h2>검토판 보는 법</h2>
+  <div class="card">
+    <ol>
+      <li><a href="../">검토판</a>을 열고 첫 안내에서 '건너뛰기'.</li>
+      <li>UID 활성화에 <code>TEST-PREV26</code> 입력 (또는 아래 '검토 ▲' 막대의 '① UID 활성화').</li>
+      <li>막대의 '② 키 연결 흉내' → '③ 프로 화면'.</li>
+      <li>막대에서 잔고·판정·켬/끔·날씨·배율 켠 뒤를 바꿔 가며 봅니다.</li>
+    </ol>
+    <p class="sub">검토판은 가짜 서버로만 돌아 실제 주문·회원·거래소와 연결되지 않습니다. 새로 고치면 처음부터 다시 해야 합니다.</p>
+  </div>
+</section>
+
+<footer>PIXEL TRADING FLOOR · 프로 모드 내부 검토 자료 · 게시 전</footer>
+</div>
+</body>
+</html>

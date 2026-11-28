@@ -1,0 +1,21 @@
+/* 프로 모드 검토판 전용 막대(tools/pro-review/pro-review-fake.js) — 회원 빌드에는 없음. 화면 아래 고정, 접힌 채 한 줄 '내부 검토판 · 실제 주문 없음' */
+.prv-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 9000; padding: 0 0 env(safe-area-inset-bottom, 0); font: 13px/1.35 system-ui, sans-serif; color: #1b1b1b; background: #ffe08a; border-top: 2px solid #000; box-shadow: 0 -2px 0 rgba(0, 0, 0, .35); }
+.prv-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 34px; padding: 0 8px 0 12px; }
+.prv-note { font-weight: 700; }
+.prv-toggle { min-height: 30px; padding: 0 10px; font: 700 13px/1 system-ui, sans-serif; color: #1b1b1b; background: #fff6d6; border: 1px solid #000; border-radius: 0; }
+.prv-body { max-height: 52vh; overflow-y: auto; padding: 4px 12px 10px; border-top: 1px solid rgba(0, 0, 0, .3); }
+.prv-body[hidden] { display: none; }
+.prv-uid { margin: 4px 0 6px; font-weight: 700; }
+.prv-group { margin: 0 0 6px; }
+.prv-title { margin: 0 0 4px; font-size: 12px; font-weight: 700; opacity: .75; }
+.prv-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.prv-btn { min-height: 32px; padding: 0 10px; font: 13px/1 system-ui, sans-serif; color: #1b1b1b; background: #fff; border: 1px solid #000; border-radius: 0; }
+.prv-btn.on { color: #fff; background: #1b1b1b; }
+.prv-msg { margin: 4px 0 0; min-height: 1em; font-size: 12px; }
+html.pro-review .screen-body, html.pro-review .pro-body { padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)); }
+/* 사무실 사본을 못 띄우는 곳(검토판 주소가 아님) — 깨진 그림 칸을 가리고 안내 한 줄 */
+html.prv-office-off #panel-office .office-frame { display: none; }
+.prv-office-note { margin: 0; padding: 32px 18px; text-align: center; font-size: 15px; line-height: 1.6; opacity: .85; }
+/* 사무실 사본 아래 끝이 검토 막대에 가리지 않게 */
+html.pro-review #panel-office { padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px)); box-sizing: border-box; }
+.prv-in { flex: 1 1 120px; min-width: 0; min-height: 32px; padding: 0 8px; font: 14px/1 system-ui, sans-serif; color: #1b1b1b; background: #fff; border: 1px solid #000; border-radius: 0; }
